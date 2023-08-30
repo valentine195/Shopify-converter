@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: shopify-converter
+  namespace: shopify-converter
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - shopify-converter.javalent.com
+      secretName: shopify-converter-javalent-com
+  rules:
+    - host: shopify-converter.javalent.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: shopify-converter
+                port:
+                  number: 80
