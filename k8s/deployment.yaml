@@ -40,7 +40,7 @@ spec:
       - name: github-container-registry
       containers:
       - name: shopify-converter
-        image: ghcr.io/valentine195/shopify-shopify-converter:{{ .Values.sha }}
+        image: ghcr.io/valentine195/shopify-converter:{{ .Values.sha }}
         imagePullPolicy: Always
         ports:
         - containerPort: 80
