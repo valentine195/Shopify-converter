@@ -45,8 +45,8 @@ jobs:
         with:
           push: true
           tags: |
-            ghcr.io/valentine195/shopify-csv-converter:latest
-            ghcr.io/valentine195/shopify-csv-converter:${{ github.sha }}
+            ghcr.io/valentine195/shopify-shopify-converter:latest
+            ghcr.io/valentine195/shopify-shopify-converter:${{ github.sha }}
       - name: Update SHA
         uses: fjogeleit/yaml-update-action@main
         with:

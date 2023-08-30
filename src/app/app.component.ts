@@ -10,7 +10,7 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'andrew-csv-converter';
+  title = 'shopify-converter';
   files: File[] = [];
 
   onSelect(event: any) {
